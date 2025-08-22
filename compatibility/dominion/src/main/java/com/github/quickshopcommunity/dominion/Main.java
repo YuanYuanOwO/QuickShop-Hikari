@@ -81,14 +81,6 @@ public class Main extends CompatibilityModule {
     deleteWhenLandDeleted = getConfig().getBoolean("delete-shops-in-dominion-when-dominion-deleted");
   }
 
-   @Override
-   public void onDisable() {
-
-     getLogger().info("[QSDEBUG] Compat-Dominion is shutting down, printing stack trace.");
-     new RuntimeException("Shutdown Tracing").printStackTrace();
-    super.onDisable();
-  }
-
   @EventHandler(ignoreCancelled = true)
   public void onPreCreation(final ShopCreateEvent event) {
 
