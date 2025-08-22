@@ -69,25 +69,15 @@ public class Main extends CompatibilityModule {
     try {
       this.api = DominionAPI.getInstance();
     } catch (final Exception e) {
-      getLogger().warning("[QSDEBUG] Failed to hook DominionAPI, plugin disabled.");
-      e.printStackTrace();
+      getLogger().warning("Failed to hook DominionAPI, plugin disabled.");
       this.enabled = false;
       return;
     }
 
     this.enabled = Bukkit.getPluginManager().isPluginEnabled("Dominion");
-    super.onEnable();
     whitelist = getConfig().getBoolean("whitelist-mode");
     deleteWhenLosePermission = getConfig().getBoolean("delete-on-lose-permission");
     deleteWhenLandDeleted = getConfig().getBoolean("delete-shops-in-dominion-when-dominion-deleted");
-  }
-
-   @Override
-   public void onDisable() {
-
-     getLogger().info("[QSDEBUG] Compat-Dominion is shutting down, printing stack trace.");
-     new RuntimeException("Shutdown Tracing").printStackTrace();
-    super.onDisable();
   }
 
   @EventHandler(ignoreCancelled = true)
