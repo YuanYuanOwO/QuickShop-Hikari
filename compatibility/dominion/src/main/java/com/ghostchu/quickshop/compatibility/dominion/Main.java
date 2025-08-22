@@ -77,8 +77,15 @@ public class Main extends CompatibilityModule {
     this.enabled = DominionAPI.isDominionEnabled();
     whitelist = getConfig().getBoolean("whitelist-mode");
     deleteWhenLosePermission = getConfig().getBoolean("delete-on-lose-permission");
-    deleteWhenLosePermission = getConfig().getBoolean("delete-on-lose-permission");
     deleteWhenLandDeleted = getConfig().getBoolean("delete-shops-in-dominion-when-dominion-deleted");
+  }
+
+   @Override
+   public void onDisable() {
+
+     getLogger().info("[QSDEBUG] Compat-Dominion is shutting down, printing stack trace.");
+     new RuntimeException("Shutdown Tracing").printStackTrace();
+    super.onDisable();
   }
 
   @EventHandler(ignoreCancelled = true)
