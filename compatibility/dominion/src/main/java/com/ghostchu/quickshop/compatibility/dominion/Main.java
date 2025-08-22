@@ -75,7 +75,7 @@ public class Main extends CompatibilityModule {
       return;
     }
 
-    this.enabled = DominionAPI.isDominionEnabled();
+    this.enabled = Bukkit.getPluginManager().isPluginEnabled("Dominion");
     super.onEnable();
     whitelist = getConfig().getBoolean("whitelist-mode");
     deleteWhenLosePermission = getConfig().getBoolean("delete-on-lose-permission");
