@@ -68,9 +68,10 @@ public class Main extends CompatibilityModule {
 
     try {
       this.api = DominionAPI.getInstance();
-
-    } catch(final Exception ignore) {
-
+    } catch (final Exception e) {
+      getLogger().warning("[QSDEBUG] Failed to hook DominionAPI, plugin disabled.");
+      e.printStackTrace();
+      this.enabled = false;
       return;
     }
 
