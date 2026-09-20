@@ -3,9 +3,6 @@ plugins {
 }
 
 //CraftEngine API version this compatibility module is built against
-//CraftEngine API version this compatibility module is built against
-=======
->>>>>>> 1dbf575a989afcaebb4ba128e0459b91b67bc1ac
 val craftEngineVersion = "26.9.1"
 
 dependencies {
