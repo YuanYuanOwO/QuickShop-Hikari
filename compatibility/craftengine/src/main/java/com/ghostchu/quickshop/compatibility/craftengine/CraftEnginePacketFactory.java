@@ -41,10 +41,6 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @author YuanYuanOwO
  * @since 6.3.0.3
-=======
- * @author QuickShop-Hikari
- * @since 6.3.0.0
->>>>>>> 1dbf575a989afcaebb4ba128e0459b91b67bc1ac
  */
 final class CraftEnginePacketFactory implements PacketFactory<Object> {
 

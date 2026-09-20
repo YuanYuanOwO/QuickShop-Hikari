@@ -39,8 +39,8 @@ import java.util.logging.Logger;
  * <p>This converter asks CraftEngine for the exact item which has to be written into the packet for
  * the given player, using the same API CraftEngine uses for its own packets.</p>
  *
- * @author QuickShop-Hikari
- * @since 6.3.0.0
+ * @author YuanYuanOwO
+ * @since 6.3.0.3
  */
 final class CraftEngineItemConverter {
 
