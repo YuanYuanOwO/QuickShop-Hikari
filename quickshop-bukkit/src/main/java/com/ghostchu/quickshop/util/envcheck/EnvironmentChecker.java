@@ -249,6 +249,7 @@ public final class EnvironmentChecker {
             result = executeResult.getResult();
           }
         } else {
+          executeResult = new ResultContainer(CheckResult.SKIPPED, "Startup flag mark this check should be skipped.");
           result = CheckResult.SKIPPED;
         }
         if(executeResult == null) {
